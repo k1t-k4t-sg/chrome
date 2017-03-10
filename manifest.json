@@ -9,7 +9,10 @@
     "default_popup": "popup.html"
   },
   "background": {
-    "scripts": ["src/background.js"],
+    "scripts": [
+        "src/options.js",
+        "src/background.js"
+    ],
     "persistent": true
   },
   "short_name": "Mandarin",
