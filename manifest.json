@@ -1,0 +1,46 @@
+{
+  "manifest_version": 2, 
+  "name": "Mandarin", 
+  "version": "0.0.1",
+  "description": "Mandarin",
+  "browser_action": {
+    "default_title": "Mandarin",
+    "default_icon": "font/icon16.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["src/background.js"],
+    "persistent": true
+  },
+  "short_name": "Mandarin",
+  "permissions": [
+    "tabs",
+    "<all_urls>",
+    "webRequest",
+    "webRequestBlocking",
+    "webNavigation",
+    "management",
+    "storage",
+    "browsingData",
+    "history",
+    "bookmarks",
+    "activeTab"
+  ],
+  "options_page": "options.html",
+   "content_scripts":[
+    {
+      "js":[
+          "build/jquery-1.11.3.min.js",
+          "src/options.js",
+          "src/chrome.js"
+      ],
+      "css":[
+        "css/mystyles.css"
+      ],
+      "matches":[
+        "https://www.google.ru/*"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}
