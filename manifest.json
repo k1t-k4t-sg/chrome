@@ -11,7 +11,9 @@
   "background": {
     "scripts": [
         "src/options.js",
-        "src/received_a_request.js"
+        "src/received_a_request.js",
+        "src/bookmarks_chrome.js"
+        
     ],
     "persistent": true
   },

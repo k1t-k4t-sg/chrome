@@ -26,12 +26,3 @@
     return myModel;
     
 }(MANDARIN || {}));
-
-
-
-
-
-
-MANDARIN.updated_page("comand", function(backMessage){
-    console.log(backMessage+ "==> updated_page.js")
-});
