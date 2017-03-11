@@ -4,10 +4,10 @@
     "use strict";
     
     /**
-     * обновил страницу
+     * Обновил страницу
      * Пользователь обновил страницу, отправка запроса скрипту  
      * @param {object} Cargo, Команда запроса для скрипта  
-     * @return 
+     * @return backMessage ответ 
     */
     
     myModel.updated_page = function (cargo, callback){

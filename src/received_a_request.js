@@ -3,6 +3,12 @@
     
     "use strict";
     
+    /**
+     * Получить запрос
+     * Пользователь обновил страницу, Получил запрос 
+     * @param {callback} Callback_rec, function  
+     * @return callback([arrya]) 
+    */
     
     myModel.received_a_request = function (callback_rec){
         
@@ -20,7 +26,8 @@
 
 
 
-//MANDARIN.received_a_request(function(request, sender, callback){
-//    console.log(request.cargo);
-//    callback(["asdssssss"]);
-//});
+MANDARIN.received_a_request(function(request, sender, callback){
+    console.log(request.cargo);
+    callback(["asdssssss"]);
+});
+
