@@ -35,7 +35,9 @@
       "js":[
           "build/jquery-1.11.3.min.js",
           "src/options.js",
-          "src/updated_page.js"
+          "src/updated_page.js",
+          "src/chrome_search.js",
+          "src/chrome.js"
       ],
       "css":[
         "css/mystyles.css"

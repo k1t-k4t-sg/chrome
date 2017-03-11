@@ -11,7 +11,8 @@
     */
     
     return {
-        idExpansion: chrome.runtime.id
+        idExpansion: chrome.runtime.id,
+        DOM_selector: '.g .rc .r a'
     }
     
 }());
