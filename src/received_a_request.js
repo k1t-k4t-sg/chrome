@@ -4,14 +4,12 @@
     "use strict";
     
     
-    myModel.received_a_request = function (answer){
-        
-        //var answer = answer;
+    myModel.received_a_request = function (callback_rec){
         
         return chrome.extension.onMessage.addListener(function(request, sender, callback){
             if(request.acceptor == OPTIONS.idExpansion){
-                callback(answer);
-            } 
+                callback_rec(request, sender, callback)
+            }
         });
         
     };
@@ -20,5 +18,9 @@
     
 }(MANDARIN || {}));
 
-MANDARIN.received_a_request(["uspex"]);
 
+
+//MANDARIN.received_a_request(function(request, sender, callback){
+//    console.log(request.cargo);
+//    callback(["asdssssss"]);
+//});

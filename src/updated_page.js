@@ -3,6 +3,13 @@
     
     "use strict";
     
+    /**
+     * обновил страницу
+     * Пользователь обновил страницу, отправка запроса скрипту  
+     * @param {object} Cargo, Команда запроса для скрипта  
+     * @return 
+    */
+    
     myModel.updated_page = function (cargo, callback){
         
         var acceptorOptions = {
@@ -19,6 +26,11 @@
     return myModel;
     
 }(MANDARIN || {}));
+
+
+
+
+
 
 MANDARIN.updated_page("comand", function(backMessage){
     console.log(backMessage+ "==> updated_page.js")
