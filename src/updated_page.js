@@ -1,5 +1,5 @@
 ;var MANDARIN = (function (myModel) {
-    console.log("MANDARIN.js ==> Updated page"); //Обновил страницу
+    console.log("MANDARIN.js ==> updated_page.js"); //Обновил страницу
     
     "use strict";
     
@@ -21,5 +21,5 @@
 }(MANDARIN || {}));
 
 MANDARIN.updated_page("comand", function(backMessage){
-    console.log(backMessage+ "chrome.js")
+    console.log(backMessage+ "==> updated_page.js")
 });

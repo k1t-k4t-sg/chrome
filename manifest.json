@@ -11,7 +11,7 @@
   "background": {
     "scripts": [
         "src/options.js",
-        "src/background.js"
+        "src/received_a_request.js"
     ],
     "persistent": true
   },
@@ -35,7 +35,7 @@
       "js":[
           "build/jquery-1.11.3.min.js",
           "src/options.js",
-          "src/chrome.js"
+          "src/updated_page.js"
       ],
       "css":[
         "css/mystyles.css"
