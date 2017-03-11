@@ -43,15 +43,3 @@
     return myModel;
     
 }(MANDARIN || {}));
-
-
-
-
-
-
-
-
-
-MANDARIN.bookmarks_chrome(function(google_bookmarks){
-    console.log(google_bookmarks[23])
-});
