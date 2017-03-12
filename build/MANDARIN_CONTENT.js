@@ -1,6 +1,6 @@
 ;var OPTIONS = (function () {
     
-    console.log("OPTIONS.js ==> retrun settings");
+    //console.log("OPTIONS.js ==> retrun settings");
     
     "use strict";
     
@@ -17,7 +17,7 @@
     
 }());
 ;var MANDARIN = (function (myModel) {
-    console.log("MANDARIN.js ==> updated_page.js"); //Обновил страницу
+    //console.log("MANDARIN.js ==> updated_page.js"); //Обновил страницу
     
     "use strict";
     
@@ -45,7 +45,7 @@
     
 }(MANDARIN || {}));
 ;var MANDARIN = (function (myModel) {
-    console.log("MANDARIN.js ==> chrome_serach.js");
+    //console.log("MANDARIN.js ==> chrome_serach.js");
     
     "use strict";
     
