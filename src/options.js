@@ -11,8 +11,8 @@
     */
     
     return {
-        idExpansion: chrome.runtime.id,
-        DOM_selector: '.g .rc .r a'
+        idExpansion: chrome.runtime.id,         //id расширения
+        DOM_selector: '.g .rc .r a'            //тег на странице google
     }
     
 }());

@@ -15,7 +15,7 @@
         
         $(OPTIONS.DOM_selector).each(function(i,elem) {
             
-            google_links[ google_links.length ] = $(this).attr("href");;
+            google_links[ google_links.length ] = $(this).attr("href");
             
         });
         
