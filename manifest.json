@@ -5,7 +5,6 @@
   "description": "Mandarin",
   "browser_action": {
     "default_title": "Mandarin",
-    "default_icon": "font/icon16.png",
     "default_popup": "popup.html"
   },
   "background": {
