@@ -36,7 +36,7 @@
                 processNode(item);
             });
             
-            callback(google_bookmarks)
+            callback(google_bookmarks);
         });
     }
     

@@ -1,6 +1,6 @@
 ;var OPTIONS = (function () {
     
-    console.log("OPTIONS.js ==> retrun settings");
+    console.log("OPTIONS.js ==> options");
     
     "use strict";
     

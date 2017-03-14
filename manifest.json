@@ -12,23 +12,14 @@
         "src/options.js",
         "src/received_a_request.js",
         "src/bookmarks_chrome.js",
-        "src/setting.js"
+        "src/setting.js",
+        "src/export.js"
     ],
     "persistent": true
   },
   "short_name": "Mandarin",
   "permissions": [
-    "tabs",
-    "<all_urls>",
-    "webRequest",
-    "webRequestBlocking",
-    "webNavigation",
-    "management",
-    "storage",
-    "browsingData",
-    "history",
-    "bookmarks",
-    "activeTab"
+    "bookmarks"
   ],
   "options_page": "options.html",
    "content_scripts":[
