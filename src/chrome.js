@@ -1,15 +1,4 @@
 (function($) {
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
 
 $(document).ready(function(){
     
