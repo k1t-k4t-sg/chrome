@@ -36,10 +36,10 @@
 }(MANDARIN || {}));
 
 
-MANDARIN.received_a_request(function(msg, port){
-    console.log(msg);
-    port.postMessage({question: "I don't get it."});
-});
+//MANDARIN.received_a_request(function(msg, port){
+//    console.log(msg);
+//    port.postMessage({question: "I don't get it."});
+//});
 
 
 

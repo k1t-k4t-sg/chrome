@@ -18,7 +18,7 @@
             callback(msg);
             
         });
-    }
+    };
     
     return myModel;
     
@@ -29,10 +29,10 @@
 
 
 
-MANDARIN.postMes({obj: "privet"});
-MANDARIN.onMes(function(msg){
-    console.log(msg);
-});
+//MANDARIN.postMes({obj: "privet"});
+//MANDARIN.onMes(function(msg){
+//    console.log(msg);
+//});
 
 
 
