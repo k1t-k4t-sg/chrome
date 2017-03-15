@@ -1,4 +1,6 @@
 (function($) {
+    
+    console.info("WWW.GOOGLE.COM ==> выполняется на сайте")
 
 $(document).ready(function(){
     

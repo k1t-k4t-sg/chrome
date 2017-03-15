@@ -1,3 +1,5 @@
+console.info("MANDARIN.JS ==> выполняется в расширении")
+
 
 MANDARIN.bookmarks_chrome(function(google_bookmarks){
  
