@@ -4,8 +4,7 @@
   "version": "0.0.1",
   "description": "Mandarin",
   "browser_action": {
-    "default_title": "Mandarin",
-    "default_popup": "popup.html"
+    "default_title": "Mandarin"
   },
   "background": {
     "scripts": [
@@ -20,7 +19,6 @@
   "permissions": [
     "bookmarks"
   ],
-  "options_page": "options.html",
    "content_scripts":[
     {
       "js":[

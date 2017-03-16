@@ -5,6 +5,14 @@
     
     var onConnect = chrome.runtime.onConnect;
     
+    
+    /**
+     * Получить запрос
+     * Получает запрос onMessage и отправка ответа postMessage
+     * @param {callback} callback, function(msg, port)
+     * @return msg {object}, port {object}
+    */
+    
     myModel.received_a_request = function (callback){
         
         onConnect.addListener(function(port) {
@@ -15,26 +23,12 @@
             }
             
             port.onMessage.addListener(function(msg) {
-                
-                //console.group("onMessage");
-                
-                //console.log("пришол запрос с поиска google");
-                //console.log("search", msg);
-                //console.groupEnd();
                 callback(msg, port);
-
-                //msg получил запрос
-                //port.postMessage(); отправка 
             });
         });
     };
     
     return myModel;
-    
-    //MANDARIN.received_a_request(function(msg, port){
-    //  console.log(msg);
-    //  port.postMessage({question: "I don't get it."});
-    //});
     
 }(MANDARIN || {}));
 
