@@ -20,7 +20,6 @@
     {
       "js":[
           "build/jquery-1.11.3.min.js",
-          "build/MANDARIN_CONTENT.js"
           "build/GOOGLE.js"
       ],
       "css":[
