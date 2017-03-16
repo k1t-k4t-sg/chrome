@@ -10,40 +10,33 @@
         onConnect.addListener(function(port) {
             
             if(port.name !== OPTIONS.idExpansion){
-                return
+                console.log("port.name !== OPTIONS.idExpansion");
+                return false
             }
             
             port.onMessage.addListener(function(msg) {
                 
-                console.group("onMessage");
+                //console.group("onMessage");
                 
-                    console.log("пришол запрос с поиска google");
-                    console.log("search", msg);
-                //port.postMessage({question: "I don't get it."});
-                console.groupEnd();
+                //console.log("пришол запрос с поиска google");
+                //console.log("search", msg);
+                //console.groupEnd();
                 callback(msg, port);
 
-                //msg.answer == "Madame... Bovary") получил запрос
-                //port.postMessage({question: "I don't get it."}); отправка 
+                //msg получил запрос
+                //port.postMessage(); отправка 
             });
-            
-            //port.postMessage({question: "I don't get it."});
-            
-            
         });
-        
-        
     };
     
     return myModel;
     
+    //MANDARIN.received_a_request(function(msg, port){
+    //  console.log(msg);
+    //  port.postMessage({question: "I don't get it."});
+    //});
+    
 }(MANDARIN || {}));
-
-
-//MANDARIN.received_a_request(function(msg, port){
-//    console.log(msg);
-//    port.postMessage({question: "I don't get it."});
-//});
 
 
 

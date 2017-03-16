@@ -3,7 +3,7 @@
     
     "use strict";
     
-    //var google_bookmarks = [];
+    var google_bookmarks; // закладки с браузера
     
     
     /**
@@ -11,18 +11,18 @@
      * @param {node} Arrya закладки
      * @return {Arrya} google_bookmarks ссылки
     */
-    //function processNode(node) {
-    //    if(node.children) {
-    //        node.children.forEach(function(child) { 
-    //            processNode(child); 
-    //        });
-    //    }
-    //    
-    //    if(node.url) {
-    //        google_bookmarks[ google_bookmarks.length ] = node.url;
-    //    }
-    //    
-    //};
+    function processNode(node) {
+        if(node.children) {
+            node.children.forEach(function(child) { 
+                processNode(child); 
+            });
+        }
+        
+        if(node.url) {
+            google_bookmarks[ google_bookmarks.length ] = node.url;
+        }
+        
+    };
     
     /**
      * Поиск закладок
@@ -31,72 +31,25 @@
      * @return {Arrya} google_bookmarks ссылки
     */
     myModel.bookmarks_chrome = function(callback){
-        var google_bookmarks = [];
         
-        function processNode(node) {
-            if(node.children) {
-                node.children.forEach(function(child) { 
-                    processNode(child); 
-                });
-            }
-            
-            if(node.url) {
-                google_bookmarks[ google_bookmarks.length ] = node.url;
-            }
-            
-        };
+        google_bookmarks = [];
         
         return chrome.bookmarks.getTree(function(itemTree){
             
-            console.group("bookmarks_chrome")
-            
-            console.log("itemTree",itemTree)
+            //console.group("bookmarks_chrome")
+            //console.log("itemTree",itemTree)
             
             itemTree.forEach(function(item){
                 processNode(item);
-                console.log("google_bookmarks",google_bookmarks)
+                //console.log("google_bookmarks",google_bookmarks)
             });
             
             callback(google_bookmarks);
             
-            console.groupEnd();
+            //console.groupEnd();
         });
     }
     
     return myModel;
     
 }(MANDARIN || {}));
-
-
-    //myModel.bookmarks_chrome = function(callback){
-    //    var google_bookmarks = [];
-    //    
-    //    function processNode(node) {
-    //        if(node.children) {
-    //            node.children.forEach(function(child) { 
-    //                processNode(child); 
-    //            });
-    //        }
-    //        
-    //        if(node.url) {
-    //            google_bookmarks[ google_bookmarks.length ] = node.url;
-    //        }
-    //        
-    //    };
-    //    
-    //    return chrome.bookmarks.getTree(function(itemTree){
-    //        
-    //        console.group("bookmarks_chrome")
-    //        
-    //        console.log("itemTree",itemTree)
-    //        
-    //        itemTree.forEach(function(item){
-    //            processNode(item);
-    //            console.log("google_bookmarks",google_bookmarks)
-    //        });
-    //        
-    //        callback(google_bookmarks);
-    //        
-    //        console.groupEnd();
-    //    });
-    //}

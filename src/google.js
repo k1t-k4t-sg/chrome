@@ -1,6 +1,6 @@
 (function($) {
     
-    console.info("WWW.GOOGLE.COM ==> выполняется на сайте");
+    //search chrome google.ru
 
 $(document).ready(function(){
     
@@ -10,8 +10,6 @@ $(document).ready(function(){
     MANDARIN.postMes({obj: link});
     
     MANDARIN.onMes(function(msg){
-        
-        console.log(msg.question);
         
         var google_bookmarks = msg.question
         
