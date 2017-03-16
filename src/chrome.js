@@ -13,12 +13,16 @@ $(document).ready(function(){
         
         console.log(msg.question);
         
+        var google_bookmarks = msg.question
+        
         $(OPTIONS.DOM_selector).each(function(){
             
-            if((msg.question).indexOf($(this).attr("href")) !== -1){
+            if(google_bookmarks.indexOf($(this).attr("href")) !== -1){
                 $(this).parent().prepend("<span class='MANDARIN'>&#10026;</span>");
             }
         });
+        
+        google_bookmarks = null;
     });
 });  
     
