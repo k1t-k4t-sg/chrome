@@ -7,13 +7,9 @@
     "default_title": "Mandarin"
   },
   "background": {
-<<<<<<< HEAD
-    "scripts": ["build/MANDARIN_FON.js"],
-=======
     "scripts": [
         "build/EXPANSION.js"
     ],
->>>>>>> dev
     "persistent": true
   },
   "short_name": "Mandarin",
@@ -24,11 +20,8 @@
     {
       "js":[
           "build/jquery-1.11.3.min.js",
-<<<<<<< HEAD
           "build/MANDARIN_CONTENT.js"
-=======
           "build/GOOGLE.js"
->>>>>>> dev
       ],
       "css":[
         "css/mystyles.css"
