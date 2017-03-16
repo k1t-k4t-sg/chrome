@@ -15,8 +15,12 @@
             
             port.onMessage.addListener(function(msg) {
                 
-                //console.log(msg);
+                console.group("onMessage");
+                
+                    console.log("пришол запрос с поиска google");
+                    console.log("search", msg);
                 //port.postMessage({question: "I don't get it."});
+                console.groupEnd();
                 callback(msg, port);
 
                 //msg.answer == "Madame... Bovary") получил запрос

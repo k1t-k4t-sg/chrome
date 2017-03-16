@@ -32,11 +32,19 @@
     */
     myModel.bookmarks_chrome = function(callback){
         return chrome.bookmarks.getTree(function(itemTree){
+            
+            console.group("bookmarks_chrome")
+            
+            console.log("itemTree",itemTree)
+            
             itemTree.forEach(function(item){
                 processNode(item);
+                console.log("google_bookmarks",google_bookmarks)
             });
             
             callback(google_bookmarks);
+            
+            console.groupEnd();
         });
     }
     
