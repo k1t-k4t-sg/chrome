@@ -20,5 +20,22 @@
         });
         
     });
+    
+    
+    
+//MANDARIN.added_bookmark(function(url){
+//    console.log(url);
+//})
+//
+//MANDARIN.deleted_bookmark(function(url){
+//    console.log(url);
+//})
+//
+//MANDARIN.сhanged_the_bookmark(function(url){
+//    console.log(url);
+//})
+    
+    
+    
       
 }());

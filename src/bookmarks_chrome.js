@@ -25,7 +25,7 @@
     };
     
     /**
-     * Поиск закладок
+     * bookmarks_chrome Поиск закладок
      * Парсинг закладок в браузере
      * @param {callback} callback, function
      * @return {Arrya} google_bookmarks ссылки
@@ -42,7 +42,25 @@
             
             callback(google_bookmarks);
         });
-    }
+    };
+    
+    myModel.added_bookmark = function(callback){
+        chrome.bookmarks.onCreated.addListener(function(id, bookmark) {
+            callback([bookmark.url, "ADDED"]);
+        });
+    };
+    
+    myModel.deleted_bookmark = function(callback){
+        chrome.bookmarks.onRemoved.addListener(function(id, removeInfo) {
+            callback([removeInfo.node.url, "DELETE"]);
+        });
+    };
+        
+    myModel.сhanged_the_bookmark = function(callback){
+        chrome.bookmarks.onChanged.addListener(function(id, changeInfo){
+            callback([changeInfo.url, "CHANGED"]);
+        });
+    };
     
     return myModel;
     
