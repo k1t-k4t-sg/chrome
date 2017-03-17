@@ -8,10 +8,7 @@
   },
   "background": {
     "scripts": [
-        "src/options.js",
-        "src/received_a_request.js",
-        "src/bookmarks_chrome.js",
-        "src/expansion.js"
+        "build/EXPANSION.js"
     ],
     "persistent": true
   },
@@ -23,10 +20,7 @@
     {
       "js":[
           "build/jquery-1.11.3.min.js",
-          "src/options.js",
-          "src/updated_page.js",
-          "src/chrome_serach.js",
-          "src/google.js"
+          "build/GOOGLE.js"
       ],
       "css":[
         "css/mystyles.css"
