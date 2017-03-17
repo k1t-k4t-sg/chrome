@@ -14,7 +14,7 @@
             
             var google_bookmarks = msg.question
             
-            $(OPTIONS.DOM_selector).each(function(){
+            $(OPTIONS.DOM_SELECTOR).each(function(){
                 if(google_bookmarks.indexOf($(this).attr("href")) !== -1){
                     $(this).parent().prepend("<span class='MANDARIN'>&#10026;</span>");
                 }

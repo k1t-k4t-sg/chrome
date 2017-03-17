@@ -11,8 +11,8 @@
     */
     
     return {
-        idExpansion: chrome.runtime.id,  //id расширения
-        DOM_selector: '.g .rc .r a'      //тег на странице google
+        ID_EXPANSION: chrome.runtime.id,  //id расширения
+        DOM_SELECTOR: '.g .rc .r a'      //тег на странице google
     }
     
 }());
@@ -35,8 +35,8 @@
         
         onConnect.addListener(function(port) {
             
-            if(port.name !== OPTIONS.idExpansion){
-                console.log("port.name !== OPTIONS.idExpansion");
+            if(port.name !== OPTIONS.ID_EXPANSION){
+                console.log("port.name !== OPTIONS.ID_EXPANSION");
                 return false
             }
             

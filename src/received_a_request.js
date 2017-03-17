@@ -17,8 +17,8 @@
         
         onConnect.addListener(function(port) {
             
-            if(port.name !== OPTIONS.idExpansion){
-                console.log("port.name !== OPTIONS.idExpansion");
+            if(port.name !== OPTIONS.ID_EXPANSION){
+                console.log("port.name !== OPTIONS.ID_EXPANSION");
                 return false
             }
             

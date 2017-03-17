@@ -7,7 +7,7 @@
      * port = id расширения браузера
     */
     var port = chrome.runtime.connect({
-        name: OPTIONS.idExpansion
+        name: OPTIONS.ID_EXPANSION
     });
     
     /**

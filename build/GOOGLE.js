@@ -11,8 +11,8 @@
     */
     
     return {
-        idExpansion: chrome.runtime.id,  //id расширения
-        DOM_selector: '.g .rc .r a'      //тег на странице google
+        ID_EXPANSION: chrome.runtime.id,  //id расширения
+        DOM_SELECTOR: '.g .rc .r a'      //тег на странице google
     }
     
 }());
@@ -25,7 +25,7 @@
      * port = id расширения браузера
     */
     var port = chrome.runtime.connect({
-        name: OPTIONS.idExpansion
+        name: OPTIONS.ID_EXPANSION
     });
     
     /**
@@ -68,7 +68,7 @@
     */
     myModel.chrome_serach = function(){
         
-        $(OPTIONS.DOM_selector).each(function(i,elem) {
+        $(OPTIONS.DOM_SELECTOR).each(function(i,elem) {
             
             google_links[ google_links.length ] = $(this).attr("href");
             
@@ -97,7 +97,7 @@
             
             var google_bookmarks = msg.question
             
-            $(OPTIONS.DOM_selector).each(function(){
+            $(OPTIONS.DOM_SELECTOR).each(function(){
                 if(google_bookmarks.indexOf($(this).attr("href")) !== -1){
                     $(this).parent().prepend("<span class='MANDARIN'>&#10026;</span>");
                 }
