@@ -12,14 +12,26 @@
         
         MANDARIN.onMes(function(msg){
             
-            var google_bookmarks = msg.question
+            if(msg.question != undefined){
+                
+                console.log("msg.question");
+                
+                var google_bookmarks = msg.question
+                $(OPTIONS.DOM_SELECTOR).each(function(){
+                    if(google_bookmarks.indexOf($(this).attr("href")) !== -1){
+                        $(this).parent().prepend(OPTIONS.DOM_SPAN);
+                    }
+                });
+            }
             
-            $(OPTIONS.DOM_SELECTOR).each(function(){
-                if(google_bookmarks.indexOf($(this).attr("href")) !== -1){
-                    $(this).parent().prepend("<span class='MANDARIN'>&#10026;</span>");
-                }
-            });
+            if(msg.link_add != undefined){
+                var link_add = msg.link_add;
+
+                $(OPTIONS.DOM_SELECTOR+'[href="'+link_add[0]+'"]').parent().prepend(OPTIONS.DOM_SPAN);
+                
+            }
             
+            link_add = null;
             google_bookmarks = null;
         });
     });  

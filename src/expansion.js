@@ -19,6 +19,13 @@
             
         });
         
+        MANDARIN.added_bookmark(function(url){
+            
+            console.log(url);
+            
+            port.postMessage({link_add: url});
+        })
+        
     });
     
     

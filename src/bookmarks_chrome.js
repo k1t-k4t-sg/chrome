@@ -46,6 +46,7 @@
     
     myModel.added_bookmark = function(callback){
         chrome.bookmarks.onCreated.addListener(function(id, bookmark) {
+            console.log("bookmarcks");
             callback([bookmark.url, "ADDED"]);
         });
     };
