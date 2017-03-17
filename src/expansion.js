@@ -24,6 +24,12 @@
             console.log(url);
             
             port.postMessage({link_add: url});
+        });
+        
+        MANDARIN.deleted_bookmark(function(url){
+            console.log(url);
+            
+            port.postMessage({link_remove: url});
         })
         
     });

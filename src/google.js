@@ -31,6 +31,14 @@
                 
             }
             
+            if(msg.link_remove != undefined){
+                var link_remove = msg.link_remove;
+            
+                $($(OPTIONS.DOM_SELECTOR+'[href="'+link_remove[0]+'"]').siblings(".MANDARIN")).remove();
+                
+            }
+          
+            link_remove = null;
             link_add = null;
             google_bookmarks = null;
         });
