@@ -3,6 +3,7 @@
     "use strict"
     
     //search chrome google.ru
+    //1. Доступен только при обновлении страници
 
     $(document).ready(function(){
         
